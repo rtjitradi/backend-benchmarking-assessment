@@ -37,7 +37,9 @@ def find_anagrams(words):
     for word in words:
         if word not in anagrams:
             anagrams[alphabetize(word)] = [word]
-            return anagrams
+        else:
+            anagrams[alphabetize(word)].append(word)
+    return anagrams
 
 
 def main(args):
