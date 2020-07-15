@@ -35,10 +35,11 @@ def find_anagrams(words):
     # return anagrams
     anagrams = {}
     for word in words:
-        if word not in anagrams:
-            anagrams[alphabetize(word)] = [word]
+        alpha_order = alphabetize(word)
+        if alpha_order not in anagrams:
+            anagrams[alpha_order] = [word]
         else:
-            anagrams[alphabetize(word)].append(word)
+            anagrams[alpha_order].append(word)
     return anagrams
 
 
